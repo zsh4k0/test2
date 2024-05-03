@@ -1,0 +1,130 @@
+#contact-container
+    width: 100%
+    display: flex
+    padding: 44px 0
+    justify-content: center
+    background: #d9d9d4
+
+    #contact
+        width: 100%
+        max-width: 1368px
+        justify-content: center
+        background: #e9e9e5
+        margin-bottom: 22px
+        border-radius: 11px
+        h2.title
+            grid-column: 2
+            width: 100%
+            max-width: 1368px
+            text-align: left
+            padding: 22px
+            font-size: var(--text-size-m)
+            box-sizing: border-box
+            color: #444
+    .container
+        width: 100%
+        display: grid
+        gap: 22px
+        grid-template-columns: 1fr 1fr
+        background: #e9e9e5
+        border-radius: 7px
+        margin-bottom: 22px
+        .basic
+            display: grid
+            justify-content: space-between
+            flex-wrap: wrap
+            box-sizing: border-box
+            justify-content: center
+            padding: 22px
+            grid-template-columns: .8fr .8fr
+            grid-template-columns: .8fr .8fr
+            gap: 11px 11px
+
+            .item
+                display: grid
+                grid-template-rows: auto 2fr auto
+                padding: 22px
+                gap: 22px
+                font-size: var(--text-size-regular)
+                color: #333
+                background: #d9d9d4
+                border-radius: 7px
+                h2
+                    font-weight: normal
+                    font-size: 1.4rem
+                p
+                    font-size: var(--text-size-regular)
+                a
+                    color: #333
+
+                .icon
+                    font-size: 35px
+                    color: #555
+                    transition: .35s color
+                    cursor: default
+                    &.--facebook:hover
+                        color: #1b1bd3
+                    &.--linkedin:hover
+                        color: #1b4cd3
+                    &.--x:hover
+                        color: #000
+                    &.--instagram:hover
+                        color: #e9202a
+
+                &:hover .icon
+                    &.--phone, &.--mail , &.--like
+                        color: #2294ff
+
+                    &.--map
+                        color: #3cc469
+
+                .social
+                    display: flex
+                    gap: 22px
+                    .icon
+                        cursor: pointer
+
+        .form
+            display: flex
+            justify-content: center
+            align-items: center
+            form, form label
+                display: flex
+                flex-direction: column
+            form
+                gap: 22px
+                width: 100%
+                max-width: 300px
+                padding: 22px
+                background: #d9d9d4
+                border-radius: 7px
+
+                h2
+                    font-weight: normal
+                    display: block
+                    margin-bottom: 11px
+
+                input
+                    padding: 11px
+                    outline: none
+                    background: #c2c2b7
+
+                    &[type="button"]
+                        font-weight: 600
+                        font-size: var(--text-size-regular)
+                        color: #433
+        .separator
+            background: #000
+    iframe
+        width: 100%
+@media screen and (max-width: 1144px)
+    #contact-container .container
+        display: flex
+        flex-direction: column-reverse
+        max-width: 100%
+
+        .basic
+            display: flex
+
+            .item
+                width: 222px

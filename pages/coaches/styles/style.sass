@@ -1,0 +1,73 @@
+@import ../../../sass-components/cards
+section.coaches-container
+    background: #d9d9d4
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    box-sizing: border-box
+    padding: 44px
+
+    .container
+        flex-wrap: wrap-reverse
+        display: flex
+        overflow: hidden
+        border-radius: 22px
+        width: 100%
+        max-width: 1440px
+        box-sizing: border-box
+        justify-content: center
+        img
+            width: calc(50% + 22px)
+            height: 300px
+            border-radius: 0 22px 22px 0
+
+        .text
+            width: 50%
+            height: 300px
+            position: relative
+            padding: 22px
+            box-sizing: border-box
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            border-radius: 22px
+            overflow: hidden
+            margin-right: -22px
+            .img_bg
+                display: block
+                background: #0009
+                backdrop-filter: blur(11px)
+
+            .img, img, .img_bg
+                height: 300px
+                width: 100%
+                position: absolute
+                border-radius: 22px
+                z-index: 1
+                left: 0
+                top: 0
+            h2, h3, p
+                position: relative
+                z-index: 1
+                color: #fff
+            h2
+                font-size: var(--text-size-m)
+            h3
+                font-weight: 600
+                font-size: var(--text-size-regular)
+            p
+                font-size: var(--text-size-regular)
+
+@media screen and (max-width: 768px)
+    section.coaches-container
+        .container
+            gap: 0
+            .text, img
+                border-radius: 11px
+                width: 100%
+                max-width: 100%
+                margin-right: 0
+
+            .text 
+                margin-top: -22px

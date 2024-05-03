@@ -1,0 +1,43 @@
+#galery
+    background: #D9D9D4
+    width: 100%
+    .header-galery
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 122px
+        padding: 44px 0
+        box-sizing: border-box
+        color: var(--dark-light)
+        h2
+            font-size: 4rem
+        p
+            font-weight: 500
+            line-height: var(--text-size-m)
+            font-size: var(--text-size-regular)
+    .image, p, h2
+        max-width: 700px
+        width: 98%
+    .contaienrs
+        display: flex
+        width: 100%
+        justify-content: center
+        gap: 122px
+        .image
+            max-width: 100%
+            cursor: pointer
+            overflow: hidden
+        img
+            width: 100%
+            max-width: 90vw
+            object-fit: cover
+            transition-property: filter, transform
+            transition-timing-function: ease-out
+            transition-duration: 1s
+            &:hover
+                filter: brightness(.7)
+                transform: scale(1.1)
+        .left, .right
+            display: flex
+            flex-direction: column
+            gap: 222px

@@ -1,0 +1,70 @@
+section.carousel-container
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    width: calc( 100vw - 6px )
+    height: calc( 78vh - 4.5rem )
+    overflow: hidden
+    .carousel
+        position: sticky
+        display: flex
+        flex-direction: row
+        flex-wrap: nowrap
+        height: 100%
+        overflow: visible
+        transition-property: transform
+        [carousel-item]
+            width: calc( 100vw - 6px )
+            height: 100%
+            box-sizing: border-box
+            &.img
+                background-size: contain
+                background-position: center center
+                background-repeat: no-repeat
+        &.transition
+            transition-duration: .5s
+        &.transition-fast
+            transition-timing-function: linear
+    .controls
+        color: var(--light)
+        display: flex
+        flex-direction: row
+        align-items: center
+        width: max-content
+        position: sticky
+        margin-bottom: -10%
+        left: 50%
+        transform: translateX(-50%)
+        bottom: 10%
+        height: 3rem
+        padding: .5rem 1rem
+        border-radius: 22rem
+        background: #0006
+        flex-wrap: nowrap
+        svg
+            color: var(--light)
+            cursor: pointer
+            height: 1.2rem
+            &:hover
+                color: var(--secondary-color)
+            &:active
+                opacity: .7
+
+        .steps
+            margin: 0 .5rem
+            display: flex
+            width: max-content
+            gap: .4rem
+            .step
+                width: 1rem
+                height: 1rem
+                border: solid 2px var(--light)
+                border-radius: 2rem
+                transition: .35s background
+                cursor: pointer
+                &.active
+                    background: var(--white)
+                &:hover
+                    border-color: var(--contrast)
+                &:active
+                    opacity: .7

@@ -1,0 +1,78 @@
+#text-carousel
+    position: relative
+    background: #8E8D83
+    height: 90vh
+    width: auto
+    .steps-container
+        width: 100%
+        height: 100%
+        position: absolute
+        display: flex
+        flex-direction: column
+        justify-content: end
+        align-items: center
+        top: 0
+        pointer-events: none
+        .steps
+            display: flex
+            gap: 20px
+            box-sizing: border-box
+            padding: 22px
+            div
+                pointer-events: all
+                width: 11px
+                height: 11px
+                border-radius: 11px
+                background: #b1b0a8
+                cursor: pointer
+                &.active
+                    background: #e6e4d9
+
+    .controls
+        position: absolute
+        background: none
+        display: flex
+        justify-content: space-between
+        padding: 22px
+        box-sizing: border-box
+        z-index: 3
+        width: 100%
+        height: 100%
+        top: 0
+        pointer-events: none
+        svg
+            pointer-events: all
+
+    // #carousel[class="carousel transition"]
+    //     [carousel-item] p
+    //         transition: none
+    //         transform: translateX(-10%)
+    //         opacity: 0
+
+    [carousel-item]
+        display: flex
+        justify-content: center
+        height: 100%
+        p
+            display: flex
+            flex-direction: column
+            justify-content: center
+            max-width: 1024px
+            gap: 22px
+            transition-duration: 1s
+            transition-property: opacity, transform
+            transition-timing-function: ease-in
+            opacity: 1
+            padding: 44px
+            font-size: var(--text-size-xm)
+            color: #fff
+            height: 100%
+            box-sizing: border-box
+
+@keyframes fade-lest
+    from
+        transform: translateX(-50%)
+        opacity: 0
+    to
+        transform: translateX(0)
+        opacity: 1

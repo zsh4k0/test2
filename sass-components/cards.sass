@@ -1,0 +1,38 @@
+#cards-container
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    background: var(--light)
+    padding: 44px
+    box-sizing: border-box
+    .container
+        max-width: 1440px
+        display: flex
+        box-sizing: border-box
+        justify-content: center
+        gap: 20px 
+
+        .card
+            border-radius: 11px
+            box-sizing: border-box
+            padding: 22px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            background: #fff
+            gap: 11px
+            width: 344px
+            height: 440px
+
+            img
+                flex: 1
+                display: flex
+                max-width: 100%
+                height: 250px
+                margin: auto
+                border-radius: 5px
+                object-fit: cover
+
+            h2, p
+                color: var(--dark-light-4)

@@ -1,0 +1,124 @@
+#cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: var(--light);
+  padding: 44px;
+  box-sizing: border-box;
+}
+#cards-container .container {
+  max-width: 1440px;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  gap: 20px;
+}
+#cards-container .container .card {
+  border-radius: 11px;
+  box-sizing: border-box;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  gap: 11px;
+  width: 344px;
+  height: 440px;
+}
+#cards-container .container .card img {
+  flex: 1;
+  display: flex;
+  max-width: 100%;
+  height: 250px;
+  margin: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+#cards-container .container .card h2, #cards-container .container .card p {
+  color: var(--dark-light-4);
+}
+
+section.coaches-container {
+  background: #d9d9d4;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 44px;
+}
+section.coaches-container .container {
+  flex-wrap: wrap-reverse;
+  display: flex;
+  overflow: hidden;
+  border-radius: 22px;
+  width: 100%;
+  max-width: 1440px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+section.coaches-container .container img {
+  width: calc(50% + 22px);
+  height: 300px;
+  border-radius: 0 22px 22px 0;
+}
+section.coaches-container .container .text {
+  width: 50%;
+  height: 300px;
+  position: relative;
+  padding: 22px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 22px;
+  overflow: hidden;
+  margin-right: -22px;
+}
+section.coaches-container .container .text .img_bg {
+  display: block;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(11px);
+}
+section.coaches-container .container .text .img, section.coaches-container .container .text img, section.coaches-container .container .text .img_bg {
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  border-radius: 22px;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+section.coaches-container .container .text h2, section.coaches-container .container .text h3, section.coaches-container .container .text p {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+section.coaches-container .container .text h2 {
+  font-size: var(--text-size-m);
+}
+section.coaches-container .container .text h3 {
+  font-weight: 600;
+  font-size: var(--text-size-regular);
+}
+section.coaches-container .container .text p {
+  font-size: var(--text-size-regular);
+}
+
+@media screen and (max-width: 768px) {
+  section.coaches-container .container {
+    gap: 0;
+  }
+  section.coaches-container .container .text, section.coaches-container .container img {
+    border-radius: 11px;
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+  }
+  section.coaches-container .container .text {
+    margin-top: -22px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

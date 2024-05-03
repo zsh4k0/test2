@@ -1,0 +1,89 @@
+
+header
+    position: fixed
+    top: 0
+    left: 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100vw
+    height: 4.5rem
+    box-sizing: border-box
+    padding: .8rem 1.6rem
+    z-index: 4
+    overflow: hidden
+
+    label[for="btn"]
+        display: none
+        user-select: none
+        cursor: pointer
+        span
+            transition: .35s color
+    nav
+        display: flex
+        gap: 1.6rem
+
+        a
+            position: relative
+            text-decoration: none
+            color: var(--light)
+            span
+                font-size: var(--text-size-regular)
+            &:hover
+                color: var(--contrast)
+
+            &::after
+                content: ""
+                height: 2px
+                transition-duration: .35s
+                transition-property: transform, background
+                transform: scaleX(0)
+                transform-origin: 0 0
+                border-radius: 4px
+                width: 100%
+                display: block
+                background: var(--contrast)
+
+            &:hover::after, &[active]:hover::after
+                transform: scaleX(100%)
+                background: var(--contrast)
+
+            &[active]::after
+                transform: scaleX(100%)
+                background: var(--light)
+
+@media (max-width: 1122px)
+    header
+        nav
+            position: fixed
+            flex-direction: column
+            top: 4.5rem
+            transform: translate(0)
+            translate: -100%
+            left: 0
+            height: calc( 100vh - 80px )
+            padding: 11.6rem 11.6rem 11.6rem 1.6rem
+            background: #787A69cc
+            backdrop-filter: blur(1.6rem)
+            transition: .35s transform
+            a
+                color: var(--light)
+        label[for="btn"]
+            display: block
+            color: var(--light)
+            font-size: var(--text-size-m)
+            span
+                display: block
+                margin-top: .6rem
+
+        input#btn:checked ~ nav 
+                transform: translate(100%)
+
+        input#btn:checked ~ label[for="btn"] span
+                color: var(--contrast)
+
+@media screen and (max-width: 300px)
+    header
+        height: 60px
+        img
+            height: 40px

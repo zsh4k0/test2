@@ -1,0 +1,134 @@
+section.holistic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 22px 22px;
+  box-sizing: border-box;
+  gap: 22px;
+}
+section.holistic .container {
+  width: 100%;
+  max-width: 1368px;
+}
+section.holistic .container .title-card {
+  background: #1E1E1E;
+}
+section.holistic .container .title-card img {
+  width: 450px;
+  height: 300px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: 0 0;
+}
+section.holistic .container .title-card, section.holistic .container .card {
+  display: flex;
+  border-radius: 11px;
+  overflow: hidden;
+  flex-direction: row;
+  height: max-content;
+  max-width: 100%;
+}
+section.holistic .container .title-card .text, section.holistic .container .card .text {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  justify-content: space-evenly;
+  padding: 44px;
+  color: var(--light);
+  box-sizing: border-box;
+  flex: 1;
+}
+section.holistic .container .title-card .text h2, section.holistic .container .card .text h2 {
+  font-size: var(--text-size-xm);
+}
+section.holistic .container .title-card .text p, section.holistic .container .card .text p {
+  max-height: 100%;
+  overflow-x: hidden;
+  font-size: var(--text-size-regular);
+}
+section.holistic .container .cards {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+  gap: 44px;
+}
+section.holistic .container .cards .card {
+  background: var(--bg-card);
+}
+section.holistic .container .cards .card:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+section.holistic .container .cards .card img {
+  width: 450px;
+  height: 270px;
+  box-sizing: border-box;
+}
+section.holistic .container .cards .card .text {
+  padding: 44px;
+  color: var(--dark-light-2);
+}
+section.holistic .container .cards .card .text h2 {
+  font-size: var(--text-size-m);
+}
+section.holistic .container .cards.vertical {
+  flex-direction: row;
+  justify-content: center;
+}
+section.holistic .container .cards.vertical .card {
+  width: 450px;
+  flex-direction: row;
+}
+section.holistic .container .cards.vertical .card:nth-child(odd) {
+  flex-direction: row;
+}
+section.holistic .container .cards.vertical .card .text {
+  padding: 22px;
+  flex-direction: column;
+  height: 322px;
+  max-height: 400px;
+  flex: unset;
+  flex-wrap: nowrap;
+  gap: 22px;
+}
+section.holistic .container .cards.vertical .card .text p {
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 1044px) {
+  section.holistic .container {
+    flex-direction: row;
+    justify-content: center;
+  }
+  section.holistic .container .title-card img {
+    width: 100%;
+  }
+  section.holistic .container .cards {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  section.holistic .container .card {
+    width: 450px;
+    max-width: 100%;
+    flex-direction: row;
+  }
+  section.holistic .container .card:nth-child(odd) {
+    flex-direction: row;
+  }
+  section.holistic .container .card .text {
+    padding: 22px;
+    flex-direction: column;
+    height: 322px;
+    max-height: 400px;
+    flex: unset;
+    flex-wrap: nowrap;
+    gap: 22px;
+  }
+  section.holistic .container .card .text p {
+    overflow-x: hidden;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

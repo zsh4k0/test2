@@ -1,0 +1,113 @@
+section.holistic
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    padding: 22px 22px
+    box-sizing: border-box
+    gap: 22px
+
+    .container
+        width: 100%
+        max-width: 1368px
+
+        .title-card
+            background: #1E1E1E
+            img
+                width: 450px
+                height: 300px
+                max-width: 100%
+                object-fit: cover
+                object-position: 0 0
+        .title-card, .card
+            display: flex
+            border-radius: 11px
+            overflow: hidden
+            flex-direction: row
+            height: max-content
+            max-width: 100%
+
+            .text
+                display: flex
+                flex-direction: column
+                max-height: 100%
+                justify-content: space-evenly
+                padding: 44px
+                color: var(--light)
+                box-sizing: border-box
+                flex: 1
+                h2
+                    font-size: var(--text-size-xm)
+                p
+                    max-height: 100%
+                    overflow-x: hidden
+                    font-size: var(--text-size-regular)
+
+        .cards
+            max-width: 100%
+            display: flex
+            flex-direction: column
+            margin-top: 22px
+            gap: 44px
+
+            .card
+                background: var(--bg-card)
+                &:nth-child(odd)
+                    flex-direction: row-reverse
+                img
+                    width: 450px
+                    height: 270px
+                    box-sizing: border-box
+                .text
+                    padding: 44px
+                    color: var(--dark-light-2)
+                    h2
+                        font-size: var(--text-size-m)
+            &.vertical
+                flex-direction: row
+                justify-content: center
+                .card
+                    width: 450px
+                    flex-direction: row
+                    &:nth-child(odd)
+                        flex-direction: row
+                    .text
+                        padding: 22px
+                        flex-direction: column
+                        height: 322px
+                        max-height: 400px
+                        flex: unset
+                        flex-wrap: nowrap
+                        gap: 22px
+                        p
+                            overflow-x: hidden
+
+@media screen and (max-width: 1044px)
+
+    section.holistic .container
+        flex-direction: row
+        justify-content: center
+        .title-card
+            img
+                width: 100%
+        .cards
+            justify-content: center
+            align-items: center
+            flex-direction: row
+            
+        .card
+            width: 450px
+            max-width: 100%
+            flex-direction: row
+            &:nth-child(odd)
+                flex-direction: row
+            .text
+                padding: 22px
+                flex-direction: column
+                height: 322px
+                max-height: 400px
+                flex: unset
+                flex-wrap: nowrap
+                gap: 22px
+                p
+                    overflow-x: hidden

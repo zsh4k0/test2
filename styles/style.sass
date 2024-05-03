@@ -1,0 +1,105 @@
+:root
+    --dark: #2B2B2B
+    --dark-light: #3B3B3B
+    --dark-light-2: #565656
+    --dark-light-3: #5E5E5E
+    --dark-light-4: #747474
+    --white: #FFFFFF
+    --light: #E1E2D9
+    --secondary-color: #776262
+    --primary-color: #787A69
+    --contrast: #dff7a6
+    //Font size
+    --text-size-regular: 1.2rem
+    --text-size-m: 2rem
+    --text-size-x: 4rem
+    --text-size-xm: 3rem
+    --text-size-xl: 7rem
+    //paddings
+
+@media screen and (max-width: 590px)
+    :root
+        --text-size-regular: 1rem
+        --text-size-m: 1.65rem
+        --text-size-x: 2rem
+        --text-size-xm: 3rem
+        --text-size-xl: 3.5rem
+
+@media screen and (max-width: 300px)
+    :root
+        --text-size-regular: 1rem
+        --text-size-m: 1.65rem
+        --text-size-x: 2rem
+        --text-size-xm: 3rem
+        --text-size-xl: 3rem
+*
+    margin: 0
+    padding: 0
+    border: 0
+    flex-wrap: wrap
+    font-family: "montserrat", sans-serif
+
+body
+    max-width: 100vw
+    overflow-x: hidden
+
+.line
+    width: calc( 100vw - 6px - 2rem)
+    height: 2px
+    background: #ddd
+    box-sizing: border-box
+.break
+    margin: 4rem auto
+
+*::-webkit-scrollbar
+    width: 6px
+    height: 6px
+
+*::-webkit-scrollbar-track
+    background-color: var(--light)
+
+*::-webkit-scrollbar-thumb
+    background: var(--primary-color)
+    border-radius: 20px
+
+.icon
+    display: inline-block
+    width: 1em
+    height: 1em
+    background-color: currentColor
+    -webkit-mask-image: var(--svg)
+    mask-image: var(--svg)
+    -webkit-mask-repeat: no-repeat
+    mask-repeat: no-repeat
+    -webkit-mask-size: 100% 100%
+    mask-size: 100% 100%
+
+    &.--phone
+        --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M18.118 14.702L14 15.5c-2.782-1.396-4.5-3-5.5-5.5l.77-4.13L7.815 2H4.064c-1.128 0-2.016.932-1.847 2.047c.42 2.783 1.66 7.83 5.283 11.453c3.805 3.805 9.286 5.456 12.302 6.113c1.165.253 2.198-.655 2.198-1.848v-3.584z'/%3E%3C/svg%3E")
+
+    &.--map
+        --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cg fill='none' stroke='black' stroke-width='1.5'%3E%3Cpath d='M20 10c0 4.418-8 12-8 12s-8-7.582-8-12a8 8 0 1 1 16 0Z'/%3E%3Cpath fill='black' stroke-linecap='round' stroke-linejoin='round' d='M12 11a1 1 0 1 0 0-2a1 1 0 0 0 0 2'/%3E%3C/g%3E%3C/svg%3E")
+
+    &.--mail
+        --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cg fill='none' stroke='black' stroke-width='1.5'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m7 9l5 3.5L17 9'/%3E%3Cpath d='M2 17V7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2Z'/%3E%3C/g%3E%3C/svg%3E")
+
+    &.--like
+        --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='black' d='M5 9v12H1V9zm4 12a2 2 0 0 1-2-2V9c0-.55.22-1.05.59-1.41L14.17 1l1.06 1.06c.27.27.44.64.44 1.05l-.03.32L14.69 8H21a2 2 0 0 1 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21zm0-2h9.03L21 12v-2h-8.79l1.13-5.32L9 9.03z'/%3E%3C/svg%3E")
+
+    &.--facebook
+        --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='0.49em' height='1em' viewBox='0 0 486.037 1000'%3E%3Cpath fill='%23000' d='M124.074 1000V530.771H0V361.826h124.074V217.525C124.074 104.132 197.365 0 366.243 0C434.619 0 485.18 6.555 485.18 6.555l-3.984 157.766s-51.564-.502-107.833-.502c-60.9 0-70.657 28.065-70.657 74.646v123.361h183.331l-7.977 168.945H302.706V1000z'/%3E%3C/svg%3E")
+    &.--x
+        --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 16 16'%3E%3Cpath fill='%23000' d='M9.294 6.928L14.357 1h-1.2L8.762 6.147L5.25 1H1.2l5.31 7.784L1.2 15h1.2l4.642-5.436L10.751 15h4.05zM7.651 8.852l-.538-.775L2.832 1.91h1.843l3.454 4.977l.538.775l4.491 6.47h-1.843z'/%3E%3C/svg%3E")
+    &.--linkedin
+        --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M18.44 3.06H5.56a2.507 2.507 0 0 0-2.5 2.5v12.88a2.507 2.507 0 0 0 2.5 2.5h12.88a2.5 2.5 0 0 0 2.5-2.5V5.56a2.5 2.5 0 0 0-2.5-2.5m1.5 15.38a1.511 1.511 0 0 1-1.5 1.5H5.56a1.511 1.511 0 0 1-1.5-1.5V5.56a1.511 1.511 0 0 1 1.5-1.5h12.88a1.511 1.511 0 0 1 1.5 1.5Z'/%3E%3Cpath fill='%23000' d='M6.376 10.748a1 1 0 1 1 2 0v6.5a1 1 0 0 1-2 0Z'/%3E%3Ccircle cx='7.376' cy='6.744' r='1' fill='%23000'/%3E%3Cpath fill='%23000' d='M17.62 13.37v3.88a1 1 0 1 1-2 0v-3.88a1.615 1.615 0 1 0-3.23 0v3.88a1 1 0 0 1-2 0v-6.5a1.016 1.016 0 0 1 1-1a.94.94 0 0 1 .84.47a3.609 3.609 0 0 1 5.39 3.15'/%3E%3C/svg%3E")
+    &.--instagram
+        --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3'/%3E%3C/svg%3E")
+@import ./sass/header
+@import ./sass/background
+@import ./sass/middle-text
+@import ./sass/developent-of-experiences
+@import ./sass/vertical-target
+@import ./sass/carousel
+@import ./sass/text-center
+@import ./sass/contact
+@import ./sass/text-carousel
